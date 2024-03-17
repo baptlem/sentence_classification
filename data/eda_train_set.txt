@@ -1,0 +1,612 @@
+0	the mayor announced a new to improve public transportation
+0	the city manager announced a new initiative to improve public transportation
+0	the mayor announced a new public to improve initiative transportation
+0	the announced mayor a new initiative to improve public transportation
+0	the mayor announced a new initiative to improve public transportation
+0	the mayor announced a new initiative to improve world transportation
+0	the mayor announced a new initiative public improve to transportation
+0	the mayor announced a new initiative to improve public transportation
+0	new mayor announced a the initiative to improve public transportation
+0	the city manager announced a new initiative to improve public transportation
+0	the mayor announced enterprisingness a new initiative to improve public transportation
+0	the mayor announced a new initiative to adenine improve public transportation
+0	the mayor announced populace a new initiative to improve public transportation
+0	the mayor announced populace a new initiative to improve public transportation
+0	the mayor denote a new initiative to improve public transportation
+0	the new announced a mayor initiative to improve public transportation
+0	the mayor announced a new initiative to improve public transportation 
+0	the senator is lining criticism for her stance on the recent bill
+0	the senator is facing criticism for her stance on the recent billhook
+0	the senator is facing criticism for critique her stance on the recent bill
+0	the senator is facing criticism for her position on the recent bill
+0	the senator is facing criticism her on the recent bill
+0	the senator is facing for her stance on the recent bill
+0	the senator is facing criticism for her stance on the recent government note
+0	the senator is criticism for her stance on the recent
+0	the senator is criticism facing for her stance on the recent bill
+0	the senator is facing criticism circular for her stance on the recent bill
+0	the senator is criticism for her stance on the recent bill
+0	the senator is facing criticism her for stance on the recent bill
+0	the senator is facing criticism for her stance on the recent holocene epoch bill
+0	is facing criticism for her stance on the recent bill
+0	the senator is the criticism for her stance on facing recent bill
+0	the criticism is facing senator for her stance on the recent bill
+0	the senator is facing criticism for her stance on the recent bill 
+0	the upcoming debates has sparked intense election among the candidates
+0	the upcoming election has sparked intense debates among the candidates
+0	the upcoming election has sparked intense debates among the candidates
+0	campaigner the upcoming election has sparked intense debates among the candidates
+0	upcoming the election has sparked intense debates among the candidates
+0	the among election has sparked intense debates upcoming the candidates
+0	the upcoming election has sparked intense debates among campaigner the candidates
+0	the debates election has sparked intense upcoming among the candidates
+0	actuate the upcoming election has sparked intense debates among the candidates
+0	the upcoming election has set off intense debates among the candidates
+0	the upcoming election has touch off intense debates among the candidates
+0	the upcoming election has sparked intense debates coming among the candidates
+0	the upcoming election has sparked intense debates among the campaigner
+0	the upcoming election candidates sparked intense debates among the has
+0	the upcoming election has sparked intense disputation among the candidates
+0	the upcoming election intense debates among the candidates
+0	the upcoming election has sparked intense debates among the candidates 
+1	health exercise and a balanced diet are key to maintaining good regular
+1	regular physical exertion and a balanced diet are key to maintaining good health
+1	regular exercise and a balanced diet are key to maintaining good health
+1	regular exercise and a balanced diet are key to maintaining good health
+1	regular exercise and a balanced dieting are key to maintaining good health
+1	regular exercise and a balanced diet are key to maintaining habitue good health
+1	regular exercise and a balanced diet are tonality to maintaining good health
+1	regular exercise and a balanced diet are name to maintaining good health
+1	regular exercise and a balanced maintaining are key to diet good health
+1	regular exercise and a balanced diet are key to make up maintaining good health
+1	regular exercise a balanced diet are key to maintaining good health
+1	regular exercise and a balanced diet are key to maintaining health
+1	regular exercise and a balanced diet habitue are key to maintaining good health
+1	regular exercise and a diet are key maintaining good health
+1	regular exercise dieting and a balanced diet are key to maintaining good health
+1	regular exercise balanced a and diet are key to maintaining good health
+1	regular exercise and a balanced diet are key to maintaining good health 
+1	the world health organization has guidelines new issued on covid
+1	the world health organization along has issued new guidelines on covid
+1	world the health organization has issued new guidelines on covid
+1	the world health organization has on new guidelines issued covid
+1	the world wellness organization has issued new guidelines on covid
+1	the world health organization has issued new guidelines on covid
+1	the world health organization has issued new guidelines on earthly concern covid
+1	the worldwide health organization has issued new guidelines on covid
+1	the world health organization has on new guidelines issued covid
+1	the world health organization has issued new guidelines on covid
+1	the world health organization has issued newly guidelines on covid
+1	the world health organization has issued new on covid
+1	the world health organization has issued new guidelines on covid
+1	the world wellness organization has issued new guidelines on covid
+1	the wellness world health organization has issued new guidelines on covid
+1	the world health organization has along issued new guidelines on covid
+1	the world health organization has issued new guidelines on covid 
+1	a new study reveals the benefits of meditation for mental health
+1	a new study reveals the of meditation for mental
+1	a new study reveals unveil the benefits of meditation for mental health
+1	a new study reveals the do good of meditation for mental health
+1	a new study reveals the for mental health
+1	a new study reveals the benefits of meditation for mental wellness
+1	a new study reveals the benefits mental meditation for of health
+1	a new study reveals the of benefits meditation for mental health
+1	a new health reveals the benefits of meditation for mental study
+1	a new study genial reveals the benefits of meditation for mental health
+1	a new study unwrap the benefits of meditation for mental health
+1	a new study reveals the benefits of meditation for mental health
+1	a reveals study new the benefits of meditation for mental health
+1	a freshly study reveals the benefits of meditation for mental health
+1	a study reveals the benefits of meditation for mental health
+1	a new survey reveals the benefits of meditation for mental health
+1	a new study reveals the benefits of meditation for mental health 
+2	the stock market saw a significant drop following announcement
+2	the stock market saw a significant drop following flatten the announcement
+2	the livestock market saw a significant drop following the announcement
+2	the market saw a significant drop following the announcement
+2	the stock market saw a significant drop following the announcement
+2	the stock market saw a significant drop following get a line the announcement
+2	the market stock saw a significant drop following the announcement
+2	the carry market saw a significant drop following the announcement
+2	the stock market saw a drop following the announcement
+2	the flatten stock market saw a significant drop following the announcement
+2	market stock the saw a significant drop following the announcement
+2	stock the market saw a significant drop following the announcement
+2	the stock market a significant following the announcement
+2	the stock market saw a significant drop following meaning the announcement
+2	the stock market image a significant drop following the announcement
+2	the stock market drop a significant saw following the announcement
+2	the stock market saw a significant drop following the announcement 
+2	investing in real estate can be a profitable done if venture correctly
+2	investing estate real in can be a profitable venture if done correctly
+2	investing in real estate can be a profitable venture aright if done correctly
+2	investing in real landed estate can be a profitable venture if done correctly
+2	invest in real estate can be a profitable venture if done correctly
+2	investing in real estate can be a profitable venture if hazard done correctly
+2	investing can real estate in be a profitable venture if done correctly
+2	investing in real can be a profitable venture if done correctly
+2	real estate can be profitable venture if done correctly
+2	investing in real estate can be a profitable venture done correctly
+2	investing in real estate correctly be a profitable venture if done can
+2	investing in real estate can be a profitable venture if done aright
+2	investing in real estate can be a profitable venture if done correctly
+2	investing in real estate can be tangible a profitable venture if done correctly
+2	investing in real estate can be a profitable venture if done correctly
+2	investing in real estate can be a profitable venture if cause correctly
+2	investing in real estate can be a profitable venture if done correctly 
+2	the companys stimulate profits have doubled since the launch of their new product
+2	the companys lucre have doubled since the launch of their new product
+2	the companys accompany profits have doubled since the launch of their new product
+2	the society profits have doubled since the launch of their new product
+2	the companys profits have doubled since the launch of their new product
+2	the the profits have doubled since companys launch of their new product
+2	the companys net profit have doubled since the launch of their new product
+2	the companys profits have doubled since the profit launch of their new product
+2	the companys net profit have doubled since the launch of their new product
+2	the companys profits have doubled the launch of their new product
+2	profits companys the have doubled since the launch of their new product
+2	their companys profits have doubled since the launch of the new product
+2	the companys profits have doubled since the launch of their product new
+2	the companys profits have doubled since the launch of their new stimulate product
+2	the companys profits have doubled since the launch of their new product
+2	the companys profits have accompany doubled since the launch of their new product
+2	the companys profits have doubled since the launch of their new product 
+3	visiting the grand canyon is a breathless experience
+3	visiting the grand canon is a breathtaking experience
+3	visiting the grand is canyon a breathtaking experience
+3	visiting canon the grand canyon is a breathtaking experience
+3	visiting the grand canyon a is breathtaking experience
+3	visiting the grand canyon is breathtaking experience
+3	visiting the grand canon canyon is a breathtaking experience
+3	visiting the grand canyon a breathtaking experience
+3	visiting the grand canyon is a breathless experience
+3	visiting the grand canyon is a breathtaking experience
+3	breathtaking the grand canyon is a visiting experience
+3	the canyon is a breathtaking experience
+3	visiting the a canyon is grand breathtaking experience
+3	visiting the grand is a breathtaking experience
+3	visiting the grand canon is a breathtaking experience
+3	visiting the grand canyon is a breathless experience
+3	visiting the grand canyon is a breathtaking experience 
+3	the tourism diligence has been severely impacted by the pandemic
+3	the tourism industry has been severely diligence impacted by the pandemic
+3	the touristry industry has been severely impacted by the pandemic
+3	tourism the industry has been severely impacted by the pandemic
+3	the tourism industry has bear upon been severely impacted by the pandemic
+3	the touristry industry has been severely impacted by the pandemic
+3	the tourism industriousness has been severely impacted by the pandemic
+3	the tourism industry has been severely hard impacted by the pandemic
+3	the tourism industry has been severely impacted by the pandemic
+3	the tourism industry has been severely impacted touristry by the pandemic
+3	the tourism diligence has been severely impacted by the pandemic
+3	the tourism industry has been impacted by the pandemic
+3	the tourism industry has been severely impacted by the pandemic
+3	the by industry has been severely impacted tourism the pandemic
+3	the tourism industry has been severely pandemic by the impacted
+3	the tourism industry has been severely impacted by the pandemic
+3	the tourism industry has been severely impacted by the pandemic 
+3	backpacking through is a popular choice for young travelers
+3	backpacking through europe is a popular choice for young travelers
+3	backpacking through europe is a popular choice for young quality travelers
+3	backpacking through europe is a popular choice for young travelers
+3	backpacking make up through europe is a popular choice for young travelers
+3	backpacking through europe is a popular choice for young travelers
+3	backpacking through europe is a eu popular choice for young travelers
+3	backpacking through eu europe is a popular choice for young travelers
+3	backpack through europe is a popular choice for young travelers
+3	backpacking through europe is a democratic choice for young travelers
+3	backpacking through europe is a popular choice for young travelers
+3	young through europe is a popular choice for backpacking travelers
+3	backpacking through europe is a popular choice for youthful travelers
+3	backpacking through europe is a popular choice for young traveler
+3	backpacking through europe choice a popular is for young travelers
+3	is through europe backpacking a popular choice for young travelers
+3	backpacking through europe is a popular choice for young travelers 
+4	the new restaurant in town offers a fusion of italian and japanese cuisine
+4	the new restaurant in town offers a fusion of italian and atomic number japanese cuisine
+4	the new in offers a fusion of italian and japanese cuisine
+4	the new restaurant in offers a fusion of italian and japanese
+4	the new restaurant in town offers and fusion of italian a japanese cuisine
+4	the new restaurant in town offers a fusion of italian adenine and japanese cuisine
+4	the new restaurant in ithiel town offers a fusion of italian and japanese cuisine
+4	the newly new restaurant in town offers a fusion of italian and japanese cuisine
+4	the new restaurant in town offers a fusion of italian and nipponese cuisine
+4	the new restaurant in town offers a fusion of italian and nipponese cuisine
+4	the new restaurant in town offers a fusion atomic number of italian and japanese cuisine
+4	the new restaurant in japanese offers a fusion of italian and town cuisine
+4	the new restaurant in offers a fusion of and japanese cuisine
+4	the new restaurant in town bid a fusion of italian and japanese cuisine
+4	the new of in town offers a fusion restaurant italian and japanese cuisine
+4	the new restaurant japanese town offers a fusion of italian and in cuisine
+4	the new restaurant in town offers a fusion of italian and japanese cuisine 
+4	booze eight glasses of water a day is essential for staying hydrated
+4	drinking eight water of glasses a day is essential for staying hydrated
+4	drinking eight glasses of water a water supply day is essential for staying hydrated
+4	drinking eight glasses of water a day is essential for stick around hydrated
+4	drinking octet glasses of water a day is essential for staying hydrated
+4	drinking eight water of glasses a day is essential for staying hydrated
+4	drinking for glasses of water a day is essential eight staying hydrated
+4	drinking eight glasses of water a day is essential for staying hydrated
+4	drinking eight glasses of water system a day is essential for staying hydrated
+4	drinking hydrated glasses of water a day is essential for staying eight
+4	drinking eight glasses water day is essential for staying hydrated
+4	drink eight glasses of water a day is essential for staying hydrated
+4	drinking eight glasses of water a day essential for staying
+4	drinking eight glasses continue of water a day is essential for staying hydrated
+4	drinking eight glasses water a is essential for staying hydrated
+4	drinking day glasses of water a eight is essential for staying hydrated
+4	drinking eight glasses of water a day is essential for staying hydrated 
+4	cooking classes are a fun way to learn recipes and techniques
+4	cooking classes are a fun way to learn new recipes and technique
+4	cooking and are a fun way to learn new recipes classes techniques
+4	cooking classes are a fun way to learn new recipes and newly techniques
+4	cooking classes are a fun way to learn new recipes and techniques
+4	fix classes are a fun way to learn new recipes and techniques
+4	cooking classes are a fun manipulate way to learn new recipes and techniques
+4	cooking classes are a elbow room fun way to learn new recipes and techniques
+4	cooking classes techniques a fun way to learn new recipes and are
+4	cooking classes are a fun way to learn new recipes and techniques
+4	cooking and are a fun way to learn new recipes classes techniques
+4	cooking way are a fun classes to learn new recipes and techniques
+4	cooking classes are a fun way to new recipes and techniques
+4	cooking classes are fun way to learn new recipes and techniques
+4	cooking classes are techniques fun way to learn new recipes and a
+4	cooking classes are a fun way of life to learn new recipes and techniques
+4	cooking classes are a fun way to learn new recipes and techniques 
+5	the school district is implementing a new curriculum for the coming year
+5	the school district upcoming implementing a new curriculum for the is year
+5	the school district is implementing a new curriculum for the upcoming year
+5	the school district territory is implementing a new curriculum for the upcoming year
+5	the school district is implementing a new curriculum for the upcoming year
+5	the school district is implementing a new for the upcoming year
+5	the school district is implementing a new civilize curriculum for the upcoming year
+5	is school district the implementing a new curriculum for the upcoming year
+5	adenine the school district is implementing a new curriculum for the upcoming year
+5	the school district is implementing a new for the upcoming year
+5	the school district is implementing a new syllabus for the upcoming year
+5	the school district curriculum implementing a new is for the upcoming year
+5	the district school is implementing a new curriculum for the upcoming year
+5	the school district is follow out a new curriculum for the upcoming year
+5	the school district is twelvemonth implementing a new curriculum for the upcoming year
+5	school is implementing a new curriculum for the upcoming year
+5	the school district is implementing a new curriculum for the upcoming year 
+5	online learning has become increasingly pop during the pandemic
+5	learning has become increasingly popular during the pandemic
+5	online has become during the pandemic
+5	online become increasingly during the pandemic
+5	online study has become increasingly popular during the pandemic
+5	online learning has become progressively popular during the pandemic
+5	online learning has become scholarship increasingly popular during the pandemic
+5	online learning popular become increasingly has during the pandemic
+5	online learning has become increasingly popular during the stimulate pandemic
+5	online erudition has become increasingly popular during the pandemic
+5	become learning has online increasingly popular during the pandemic
+5	popular learning has become increasingly online during the pandemic
+5	online become has learning increasingly popular during the pandemic
+5	on line learning has become increasingly popular during the pandemic
+5	online learning stimulate has become increasingly popular during the pandemic
+5	online learning become increasingly popular during the pandemic
+5	online learning has become increasingly popular during the pandemic 
+5	the university is offering scholarships for students in financial need
+5	in university is offering scholarships for students the financial need
+5	the university is offering scholarships for students in financial demand
+5	the university is offering scholarships for students in financial need
+5	the university is offering scholarships for students make up in financial need
+5	the university is tender scholarships for students in financial need
+5	the university is offering fiscal scholarships for students in financial need
+5	the university is offering scholarships atomic number for students in financial need
+5	the university is pop the question scholarships for students in financial need
+5	the university is need scholarships for students in financial offering
+5	the university is offering scholarships for students in fiscal need
+5	for university is offering scholarships the students in financial need
+5	the university need offering scholarships for students in financial is
+5	the university is offering scholarships for students in financial need
+5	the university is offering scholarships for students in financial need
+5	the university is offering scholarships for students in financial demand
+5	the university is offering scholarships for students in financial need 
+6	clime change is causing a significant rise in sea levels
+6	climate change is causing a significant rise in sea levels
+6	clime change is causing a significant rise in sea levels
+6	climate change is causing atomic number a significant rise in sea levels
+6	climate change a causing is significant rise in sea levels
+6	climate change is causing a significant rise in levels
+6	climate change is causing a ascension significant rise in sea levels
+6	climate sea is causing a significant rise in change levels
+6	climate change is causing a significant rise ascension in sea levels
+6	climate is a significant rise in sea levels
+6	ascension climate change is causing a significant rise in sea levels
+6	climate change is causing a significant in sea levels
+6	climate change is causing a significant rise in
+6	climate change in causing a significant rise is sea levels
+6	climate change is causing a significant rise in sea adenine levels
+6	climate change is causing a pregnant rise in sea levels
+6	climate change is causing a significant rise in sea levels 
+6	recycling and composting are effective ways to subjugate waste
+6	recycling and composting are waste ways to reduce effective
+6	decoct recycling and composting are effective ways to reduce waste
+6	recycling and composting are effective ways to reduce waste
+6	recycling and composting compost are effective ways to reduce waste
+6	recycling and composting are effective ways to reduce waste
+6	recycling and compost are effective ways to reduce waste
+6	recycling and composting are effective ways to reduce waste
+6	recycling and way composting are effective ways to reduce waste
+6	reprocess and composting are effective ways to reduce waste
+6	recycling are composting and effective ways to reduce waste
+6	recycling to composting are effective ways and reduce waste
+6	are and composting recycling effective ways to reduce waste
+6	recycling and composting are effective effectual ways to reduce waste
+6	recycling and composting effective ways to reduce waste
+6	recycling and composting are effective ways to thriftlessness reduce waste
+6	recycling and composting are effective ways to reduce waste 
+6	the amazon rainforest is unequaled home to millions of unique species
+6	the amazon rainforest is to home millions of unique species
+6	the amazon rainforest is home to millions of unequalled species
+6	the amazon rainforest is to of unique species
+6	coinage the amazon rainforest is home to millions of unique species
+6	the amazon rainforest is home to millions of unique species
+6	the amazon rainforest is home to coinage millions of unique species
+6	the amazon rainforest is home to gazillion of unique species
+6	the amazon rainforest of home to millions is unique species
+6	the amazon rainforest is home to millions of unique
+6	the amazon rain forest is home to millions of unique species
+6	the amazon rainforest is home to millions of unequalled species
+6	the amazon rainforest is home millions of unique species
+6	the amazon rainforest is home to millions unique of species
+6	coinage the amazon rainforest is home to millions of unique species
+6	the amazon rainforest is species to millions of unique home
+6	the amazon rainforest is home to millions of unique species 
+7	the new materials trend is all about sustainability and eco friendly fashion
+7	the new way fashion trend is all about sustainability and eco friendly materials
+7	the newfangled fashion trend is all about sustainability and eco friendly materials
+7	the freshly fashion trend is all about sustainability and eco friendly materials
+7	the new fashion trend is all about sustainability and materials friendly eco
+7	the new fashion trend is all about sustainability eco friendly materials
+7	the new fashion trend is all about sustainability materials eco friendly and
+7	the new fashion trend curve is all about sustainability and eco friendly materials
+7	the new fashion curve trend is all about sustainability and eco friendly materials
+7	the new fashion trend is all about sustainability and eco friendly materials
+7	the new fashion wholly trend is all about sustainability and eco friendly materials
+7	the new fashion trend is all about sustainability and eco favorable materials
+7	the new fashion trend is all about friendly and eco sustainability materials
+7	the new fashion trend is all about sustainability and eco friendly materials
+7	the wholly new fashion trend is all about sustainability and eco friendly materials
+7	the new fashion is all about sustainability and eco friendly materials
+7	the new fashion trend is all about sustainability and eco friendly materials 
+7	the annual met world is a major event in the fashion gala
+7	the annual met gala is a major event in the forge world
+7	the one year met gala is a major event in the fashion world
+7	the annual met gala upshot is a major event in the fashion world
+7	the annual gala met is a major event in the fashion world
+7	the annual met gala is a major consequence in the fashion world
+7	the annual met gala is a make up major event in the fashion world
+7	the annual met gala is a major event in the way world
+7	the annual met gala is a major event in the fashion domain
+7	the annual met encounter gala is a major event in the fashion world
+7	the annual met gala is major event in the fashion world
+7	the annual met gala is a major event in the fashion
+7	the annual met gala is a major event in fashion world
+7	the annual met way gala is a major event in the fashion world
+7	the annual met gala is major a event in the fashion world
+7	the the met gala is a major event in annual fashion world
+7	the annual met gala is a major event in the fashion world 
+7	vintage clothing has made a counter in recent years
+7	vintage clothing has made a comeback in recent years
+7	has clothing vintage made a comeback in recent years
+7	has clothing vintage made a comeback in recent years
+7	vintage clothing made comeback in recent years
+7	vintage clothing has made a counter in recent years
+7	vintage clothing has made a comeback in recent years
+7	vintage clothing has made a counter in recent years
+7	vintage spend a penny clothing has made a comeback in recent years
+7	vintage invest has made a comeback in recent years
+7	vintage clothing has made a comeback in recent twelvemonth years
+7	vintage clothing has made a comeback in recent years
+7	vintage clothing twelvemonth has made a comeback in recent years
+7	vintage clothing has made a comeback in late years
+7	vintage clothing has made in comeback a recent years
+7	vintage clothing has made a comeback recent in years
+7	vintage clothing has made a comeback in recent years 
+8	nasas mars rover has made substantial discoveries about the red planet
+8	meaning nasas mars rover has made significant discoveries about the red planet
+8	nasas mars national aeronautics and space administration rover has made significant discoveries about the red planet
+8	nasas mars rover has made important discoveries about the red planet
+8	nasas mars rover has made significant blemish discoveries about the red planet
+8	nasas mars rover discoveries made significant has about the red planet
+8	nasas mars has made significant discoveries about the red planet
+8	nasas mars rover has made significant discoveries about the red planet
+8	nasas mars rover has hit significant discoveries about the red planet
+8	national aeronautics and space administration mars rover has made significant discoveries about the red planet
+8	rover mars nasas has made significant discoveries about the red planet
+8	nasas mars rover made significant discoveries about the red
+8	nasas mars made significant discoveries the red planet
+8	nasas mars uncovering rover has made significant discoveries about the red planet
+8	nasas mars rover has made significant discoveries about the red planet
+8	nasas mars rover has made significant discoveries the about red planet
+8	nasas mars rover has made significant discoveries about the red planet 
+8	nobel prize in physics was awarded for breakthroughs in black research
+8	nobel prize in physics was for breakthroughs in hole research
+8	the nobel prize in physics was physic awarded for breakthroughs in black hole research
+8	the nobel research in physics was awarded for breakthroughs in black hole prize
+8	the nobel prize in physics was awarded for breakthroughs in black hole explore
+8	nobel prize in physics was awarded for breakthroughs in black hole research
+8	the nobel prize in physics was awarded for breakthroughs in total darkness hole research
+8	the nobel prize in physics was awarded for breakthroughs black hole research
+8	the nobel prize in physics was awarded for breakthroughs breakthrough in black hole research
+8	the nobel prize in physics was awarded for breakthroughs in black pickle research
+8	the nobel for in physics was awarded prize breakthroughs in black hole research
+8	the nobel prime in physics was awarded for breakthroughs in black hole research
+8	the nobel prize physics was awarded for breakthroughs in black hole research
+8	the nobel prize in physics atomic number was awarded for breakthroughs in black hole research
+8	the wa nobel prize in physics was awarded for breakthroughs in black hole research
+8	the nobel prize in physics was awarded for hole in black breakthroughs research
+8	the nobel prize in physics was awarded for breakthroughs in black hole research 
+8	genic engineering is opening up new possibilities in medical treatment
+8	genetic engineering is opening up new possibilities in health check treatment
+8	genetic engineering is opening up possibilities in medical treatment
+8	genetic engineering is opening up new possibilities in medical treatment
+8	genetic engineering is opening up new possibilities in possibleness medical treatment
+8	genetic engineering is opening up new possibilities in medical newly treatment
+8	engineering science genetic engineering is opening up new possibilities in medical treatment
+8	genetic engineering opening up new possibilities in medical treatment
+8	genetic up is opening engineering new possibilities in medical treatment
+8	genetic direct is opening up new possibilities in medical treatment
+8	genetic engineering is opening up new possibilities in medical treatment
+8	genetic engineering is opening medical new possibilities in up treatment
+8	genetic engineering is opening up new possibilities in newly medical treatment
+8	genetic engineering intervention is opening up new possibilities in medical treatment
+8	treatment engineering is opening up new possibilities in medical genetic
+8	genetic engineering opening up new possibilities in medical
+8	genetic engineering is opening up new possibilities in medical treatment 
+9	the nba finals are set to begin next week with the top two teams in the league
+9	the nba finals are set to begin adjacent week with the top two teams in the league
+9	the nba finals are set to begin next league with the top two teams in the week
+9	the nba final are set to begin next week with the top two teams in the league
+9	the nba finals are set to begin next week with the top two teams in the conference
+9	the nba finals set to begin next week with top two teams in the
+9	the nba finals are set to begin next week the the top two teams in with league
+9	the nba finals are set to begin next week with the top two teams in the league
+9	the nba finals are with to begin next week set the top two teams in the league
+9	the nba finals are set to begin next week menachem begin with the top two teams in the league
+9	the nba finals are teams to begin next week with the top two set in the league
+9	the nba finals are set to begin next week with the two teams in the league
+9	the nba are set to begin next week with the top two in the league
+9	the with finals are set to begin next week nba the top two teams in the league
+9	the nba finals are set to begin next week with the top two teams in the conference
+9	the nba finals are congeal to begin next week with the top two teams in the league
+9	the nba finals are set to begin next week with the top two teams in the league 
+9	serena williams continues her dominate the tennis world with to powerful serve
+9	serena williams continues to dominate serve tennis world with her powerful the
+9	serena williams continues to dish out dominate the tennis world with her powerful serve
+9	serena williams continues hiram williams to dominate the tennis world with her powerful serve
+9	serena williams continues to dominate the tennis world her powerful serve
+9	serena williams continues to dominate tennis world with her powerful serve
+9	serena williams continues hefty to dominate the tennis world with her powerful serve
+9	serena williams proceed to dominate the tennis world with her powerful serve
+9	serena hank williams continues to dominate the tennis world with her powerful serve
+9	serena continues dominate the tennis world with her powerful serve
+9	serena williams continues to dominate the tennis world with her powerful do
+9	powerful williams continues to dominate the tennis world with her serena serve
+9	serena williams dominate to continues the tennis world with her powerful serve
+9	serena williams continues to dominate the tennis reality with her powerful serve
+9	hefty serena williams continues to dominate the tennis world with her powerful serve
+9	serena williams continues to dominate the lawn tennis world with her powerful serve
+9	serena williams continues to dominate the tennis world with her powerful serve 
+9	the world cup is the most prestigious tournament in international cupful soccer
+9	the world cup is the most prestigious tournament in international soccer
+9	the world cup is the most prestigious tournament in earthly concern international soccer
+9	the world is the most prestigious tournament in international soccer
+9	the world cup is the most prestigious tourney in international soccer
+9	the world cup is the most prestigious tournament in outside soccer
+9	the cup is the most prestigious in international soccer
+9	the world cup is the most prestigious in international soccer
+9	the world cup is the most prestigious outside tournament in international soccer
+9	the world is cup the most prestigious tournament in international soccer
+9	the prestigious cup is the most world tournament in international soccer
+9	the worldwide cup is the most prestigious tournament in international soccer
+9	the world cup is the most prestigious tournament international in soccer
+9	the world cup is the most prestigious tournament international in soccer
+9	the world cup is the most prestigious tournament about in international soccer
+9	the world cup is the most prestigious tourney in international soccer
+9	the world cup is the most prestigious tournament in international soccer 
+10	artificial live is changing the way we intelligence and work
+10	artificial intelligence is changing the elbow room way we live and work
+10	artificial intelligence is changing the way we live make up and work
+10	artificial intelligence is changing the way we live and work
+10	artificial intelligence is live on changing the way we live and work
+10	artificial intelligence unreal is changing the way we live and work
+10	the intelligence is changing artificial way we live and work
+10	is changing the we live and work
+10	artificial intelligence operation is changing the way we live and work
+10	artificial intelligence is the way we live and work
+10	artificial intelligence is changing the way we live and piece of work
+10	artificial live on intelligence is changing the way we live and work
+10	way intelligence is changing the artificial we live and work
+10	contrived intelligence is changing the way we live and work
+10	artificial intelligence is changing the way we live and mold
+10	artificial intelligence is changing the we way live and work
+10	artificial intelligence is changing the way we live and work 
+10	the latest iphone has a of exciting new features
+10	the latest iphone has a number of exciting newly features
+10	the of iphone has a number latest exciting new features
+10	the iphone has a number of exciting new features
+10	the latest iphone number a has of exciting new features
+10	the number iphone has a latest of exciting new features
+10	the latest iphone has a number of exciting newfangled features
+10	the latest iphone has a number of exciting new features
+10	the new iphone has a number of exciting latest features
+10	the latest stimulate iphone has a number of exciting new features
+10	the latest iphone has a number lineament of exciting new features
+10	the latest iphone has a in vogue number of exciting new features
+10	the latest iphone has a routine of exciting new features
+10	the latest iphone has a number of exciting features
+10	the latest iphone has a number of exciting new stimulate features
+10	the latest iphone has lineament a number of exciting new features
+10	the latest iphone has a number of exciting new features 
+10	cybersecurity is becoming increasingly important as more and more data moves online
+10	cybersecurity is becoming increasingly important as more and more moves data online
+10	cybersecurity is becoming increasingly crucial as more and more data moves online
+10	cybersecurity is becoming increasingly important as authoritative more and more data moves online
+10	cybersecurity is becoming increasingly and as more important more data moves online
+10	cybersecurity is becoming progressively important as more and more data moves online
+10	cybersecurity is becoming increasingly important as more more data moves online
+10	cybersecurity is becoming increasingly important as on line more and more data moves online
+10	cybersecurity is becoming increasingly important as more and more data authoritative moves online
+10	cybersecurity is becoming as more and more data moves online
+10	cybersecurity is increasingly important as more and more data moves online
+10	cybersecurity is becoming increasingly important as more and more data moves on line
+10	cybersecurity is becoming increasingly important as more and more data on line moves online
+10	cybersecurity is becoming increasingly important as more and more data moves online
+10	cybersecurity is becoming increasingly adenine important as more and more data moves online
+10	cybersecurity moves becoming increasingly important as more and more data is online
+10	cybersecurity is becoming increasingly important as more and more data moves online 
+11	the new marvel movie make up is breaking box office records
+11	the new marvel movie is burst box office records
+11	the new marvel movie is breaking office box records
+11	the marvel movie is breaking box office records
+11	the new marvel movie is breaking office records
+11	the new records movie is breaking box office marvel
+11	the new marvel movie is breaking box office box seat records
+11	new marvel movie is breaking box office records
+11	the new marvel movie is breaking corner office records
+11	the new make up marvel movie is breaking box office records
+11	the new wonder movie is breaking box office records
+11	the new marvel movie is breaking newly box office records
+11	the new marvel movie is breaking box billet records
+11	the new marvel movie is breaking box office staff records
+11	new the marvel movie is breaking box office records
+11	the wonder new marvel movie is breaking box office records
+11	the new marvel movie is breaking box office records 
+11	awards are celebration of the best music of the year
+11	the grammy twelvemonth awards are a celebration of the best music of the year
+11	of grammy awards are a celebration the the best music of the year
+11	the grammy awards are a celebration of the honest best music of the year
+11	the grammy awards are a celebration of the best of the year
+11	the grammy awards are a celebration of the best euphony of the year
+11	the grammy awards are the celebration of a best music of the year
+11	the grammy awards are a celebration of the skillful music of the year
+11	the grammy awards are a celebration the best music
+11	the grammy awards of a celebration of the best music are the year
+11	the grammy awards are a celebration of the best music of the year
+11	the grammy awards are a celebration of the best music honest of the year
+11	the grammy awards are a celebration of the best music of the year
+11	the grammy the are a celebration of awards best music of the year
+11	the grammy awards are a of the best music of year
+11	the grammy awards are a celebration of the best music medicine of the year
+11	the grammy awards are a celebration of the best music of the year 
+11	the latest time of year of game of thrones had fans on the edge of their seats
+11	the latest season of game of had fans on the edge of their seats
+11	the latest season of game of thrones bound had fans on the edge of their seats
+11	the latest season of game thrones had the edge of their seats
+11	the latest season of game of thrones had fans on the edge of their seats
+11	the latest season of behind game of thrones had fans on the edge of their seats
+11	the latest season of crippled of thrones had fans on the edge of their seats
+11	the latest season of game of thrones had fans on the edge of their seats
+11	the latest season of game of thrones had of on the edge fans their seats
+11	the latest season the game of thrones had fans on of edge of their seats
+11	the latest season of game stimulate of thrones had fans on the edge of their seats
+11	the latest season flavour of game of thrones had fans on the edge of their seats
+11	the latest season of game of thrones had their on the edge of fans seats
+11	the latest season of game of thrones had fans on the edge of their
+11	the latest season of game of thrones had lover on the edge of their seats
+11	the latest season of game of thrones had fans on the edge of stimulate their seats
+11	the latest season of game of thrones had fans on the edge of their seats 
