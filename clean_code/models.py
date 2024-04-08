@@ -15,6 +15,7 @@ import warnings
 from sentence_transformers import SentenceTransformer, util
 from bert_score import score
 from utilities import _most_common_element
+from sklearn.neighbors import NearestCentroid
 
 warnings.filterwarnings("ignore")
 
@@ -24,7 +25,7 @@ def tf_idf_classifier(df_train,df_test,classifier=SGDClassifier(),stop_words="en
     pipeline = Pipeline([
     ('preprocess', FunctionTransformer(_preprocess_text)),
     ('vectorizer',  TfidfVectorizer(sublinear_tf=True, max_df=0.5, min_df=5, stop_words=stop_words)),
-    ('hasher', FeatureHasher(n_features=2**10)),
+    # ('hasher', FeatureHasher(n_features=2**10)),
     ("classifier", classifier)
     ])
 
@@ -57,12 +58,28 @@ def llm_embedding(model_name,df_train,df_test,k=25):
         result.append(_most_common_element(highest_indices[i]))
     return result
 
+def llm_embedding_centroid(model_name, df_train, df_test):
+    model = SentenceTransformer(model_name)
+    embeddings_test = model.encode(list(df_test["sentences"]))
+    embeddings_train = model.encode(list(df_train['sentences']))
+
+    clf = NearestCentroid()
+    clf.fit(embeddings_train, df_train['labels'])
+
+    result = clf.predict(embeddings_test)
+
+    return result
+    
+
  
 def bert_score(df_train,df_test,k=25):
     results = []
     for sentence in df_test.loc[:,"sentences"]:
-        _, _, bert_score = score(df_train.loc[:,"sentences"], [sentence], lang='en', rescale_with_baseline=True)
-        results.append(bert_score)
+        ind_results = []
+        for s_train in df_train.loc[:,"sentences"]:
+            _, _, bert_score = score([s_train], [sentence], lang='en', rescale_with_baseline=True)
+            ind_results.append(bert_score)
+        results.append(ind_results)
         # print(bert_score)
     highest_indices = np.argsort(results)[:, :k]
     result = []
