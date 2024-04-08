@@ -5,7 +5,19 @@ import seaborn as sn
 import numpy as np
 import pandas as pd
 import warnings
+import pickle
 warnings.filterwarnings("ignore")
+
+DIRECTORY = "clean_code/saved_predictions/"
+
+def save_prediction(pred,name):
+    with open(DIRECTORY + name, 'wb') as f:
+        pickle.dump(pred, f)
+     
+def load_prediction(name):
+    file_path = DIRECTORY + name
+    with open(file_path, 'rb') as f:
+        return pickle.load(f)
 
 def evaluation(predicted_label,df_test):
     if len(predicted_label) == 0:
@@ -29,7 +41,6 @@ def evaluation(predicted_label,df_test):
         sn.heatmap(df_cm, annot=True, annot_kws={"size": 8}, cmap='coolwarm', linewidth=0.5, ax=axs[i])
     plt.show()
 
-    
 
 def import_data(train_path,test_path):
     df_train = pd.read_csv(train_path,names=['labels','sentences'],sep='\t')
@@ -42,11 +53,11 @@ def aggregate_voter(list_of_preds,df_test):
     testset = df_test.loc[:,"labels"]
     assembly_result = []
     for i in range(len(testset)):
-        print([voter[i] for voter in list_of_preds],testset[i],most_common_element([voter[i] for voter in list_of_preds]))
-        assembly_result.append(most_common_element([voter[i] for voter in list_of_preds]))   
+        # print([voter[i] for voter in list_of_preds],testset[i],most_common_element([voter[i] for voter in list_of_preds]))
+        assembly_result.append(_most_common_element([voter[i] for voter in list_of_preds]))   
     return assembly_result
 
-def most_common_element(lst):
+def _most_common_element(lst):
     counts = {}
     for element in lst:
         if element in counts:
@@ -55,7 +66,6 @@ def most_common_element(lst):
             counts[element] = 1
     max_count = max(counts.values())
     most_common_elements = [key for key, value in counts.items() if value == max_count]
-
     most_common_element = None
     for element in lst:
         if element in most_common_elements:
