@@ -21,10 +21,13 @@ warnings.filterwarnings("ignore")
 
 
 
-def tf_idf_classifier(df_train,df_test,classifier=SGDClassifier(),stop_words="english"):
+def tf_idf_classifier(df_train,df_test,classifier=SGDClassifier(),stop_words="english",train_vocab=None):
+    vocab = None
+    if train_vocab is not None:
+        vocab = _create_vocab(train_vocab,stop_words="english")
     pipeline = Pipeline([
     ('preprocess', FunctionTransformer(_preprocess_text)),
-    ('vectorizer',  TfidfVectorizer(sublinear_tf=True, max_df=0.5, min_df=5, stop_words=stop_words)),
+    ('vectorizer',  TfidfVectorizer(sublinear_tf=True, max_df=0.5, min_df=5, stop_words=stop_words,vocabulary=vocab)),
     # ('hasher', FeatureHasher(n_features=2**10)),
     ("classifier", classifier)
     ])
@@ -43,6 +46,28 @@ def _preprocess_text(X):
     # print(X)
     return X.apply(lambda x:' '.join(x))
 
+def _create_vocab(df_train,stop_words="english"):
+    
+    model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
+    theme = ["Politics","Health","Finance","Travel","Food","Education","Environment","Fashion","Science","Sports","Technology","Entertainment"]
+    threshold = 0.5
+    
+    pipeline = Pipeline([
+    ('preprocess', FunctionTransformer(_preprocess_text)),
+    ('vectorizer',  TfidfVectorizer(sublinear_tf=True, stop_words=stop_words)),#, max_df=0.5, min_df=5
+    ])
+    
+    predicted_label = pipeline.fit_transform(df_train.loc[:,"sentences"])
+    vectorizer = pipeline.named_steps['vectorizer']
+    vocabulary = vectorizer.vocabulary_
+    embedding_voc= model.encode(list(vocabulary.keys()))
+    embedding_theme = model.encode(theme)
+    results = cosine_similarity(embedding_voc,embedding_theme)
+    vectors = np.array(results) 
+    indices = np.where(np.any(vectors > threshold, axis=1))[0]
+
+    return list(np.array(list(vocabulary.keys()))[indices])
+
 
 
 def llm_embedding(model_name,df_train,df_test,k=25):
@@ -60,6 +85,7 @@ def llm_embedding(model_name,df_train,df_test,k=25):
 
 def llm_embedding_centroid(model_name, df_train, df_test):
     model = SentenceTransformer(model_name)
+    # print(df_test)
     embeddings_test = model.encode(list(df_test["sentences"]))
     embeddings_train = model.encode(list(df_train['sentences']))
 

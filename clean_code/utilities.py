@@ -44,15 +44,19 @@ def evaluation(predicted_label,df_test):
 
 def import_data(train_path,test_path):
     df_train = pd.read_csv(train_path,names=['labels','sentences'],sep='\t')
+    df_train['sentences'] = df_train['sentences'].astype("str")
+    df_train = df_train[df_train['sentences'].apply(lambda x: len(x.split()) >= 4)]
     df_train = df_train.drop_duplicates(subset='sentences').reset_index(drop=True)
-    df_test = pd.read_csv(test_path, sep=';',names=['labels','sentences'])
+    if test_path == "data/test_shuffle.txt":
+        df_test = pd.read_csv(test_path, sep=';',names=['sentences'])
+    else:
+        df_test = pd.read_csv(test_path, sep=';',names=['labels','sentences'])
     # print(df_train.shape,df_test.shape)
     return df_train,df_test
 
-def aggregate_voter(list_of_preds,df_test):
-    testset = df_test.loc[:,"labels"]
+def aggregate_voter(list_of_preds):
     assembly_result = []
-    for i in range(len(testset)):
+    for i in range(len(list_of_preds[0])):
         # print([voter[i] for voter in list_of_preds],testset[i],most_common_element([voter[i] for voter in list_of_preds]))
         assembly_result.append(_most_common_element([voter[i] for voter in list_of_preds]))   
     return assembly_result
