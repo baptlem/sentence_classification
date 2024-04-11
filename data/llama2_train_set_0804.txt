@@ -713,7 +713,7 @@
 7	Trendy outfits radiate timeless allure.
 7	Stylish ensembles exude enduring appeal.
 7	Trendy outfits radiate timeless allure.
-7   Stylish ensembles exude lasting appeal.
+7	Stylish ensembles exude lasting appeal.
 7	Glamorous outfits radiate enduring allure.
 7	Stunning ensembles exude timeless appeal.
 7	Sophisticated looks radiate enduring allure.

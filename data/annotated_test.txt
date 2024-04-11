@@ -4,11 +4,11 @@
 2   ;The startup accelerator provides funding and mentorship to help early-stage companies grow.
 10  ;The benefits of biomimicry are many, including potential for developing sustainable technologies and improving efficiency.
 10  ;The nanotechnology research has potential applications in electronics and materials science.
-2   ;The impact of tax reform on the economy is a topic of ongoing debate.
+0   ;The impact of tax reform on the economy is a topic of ongoing debate.
 2   ;The impact of demographic changes on the economy is a topic of concern.
 7   ;The benefits of using digital fashion in fashion are many, including reduced waste and improved creativity.
 11  ;The theater company collaborates with local schools to bring the arts to underserved communities.
-1   ;The importance of portion control in maintaining a healthy weight cannot be overemphasized.
+4   ;The importance of portion control in maintaining a healthy weight cannot be overemphasized.
 11  ;The indie film's ensemble cast delivers memorable performances that resonate with audiences.
 10  ;The latest iPhone model features advanced facial recognition technology.
 7   ;The benefits of using organic cotton in fashion are many, including reduced pesticide use and improved sustainability.
@@ -17,7 +17,7 @@
 4	;The importance of meal planning cannot be overemphasized.
 8	;The space telescope captures images of distant galaxies to study their formation and evolution.
 6	;The importance of water conservation cannot be overstated.
-1	;The impact of food deserts on community health is a topic of concern.
+4	;The impact of food deserts on community health is a topic of concern.
 0	;The political climate is becoming increasingly tense.
 6	;The impact of climate change on the environment is a topic of ongoing scientific research.
 6	;The impact of overfishing on the environment is a topic of ongoing research.
@@ -45,7 +45,7 @@
 6   ;The impact of the gig economy on sustainable travel is a topic of ongoing debate.
 9   ;The athlete trained tirelessly to achieve peak performance.
 3   ;The benefits of traveling with a group are many, including safety and cost savings.
-10  ;The benefits of using wind turbines are many, including reduced greenhouse gas emissions and improved sustainability.
+6  ;The benefits of using wind turbines are many, including reduced greenhouse gas emissions and improved sustainability.
 8   ;The importance of scientific collaboration in addressing global challenges cannot be overemphasized.
 6   ;The impact of climate change on the economy is becoming increasingly clear.
 4   ;The importance of food affordability cannot be overemphasized.
@@ -54,7 +54,7 @@
 11  ;The pop star's music video featured stunning visual effects and choreography.
 10  ;The benefits of 3D printing are many, including improved customization and reduced waste.
 1   ;The American Heart Association recommends a diet low in sodium to reduce the risk of high blood pressure.
-9   ;The reality competition show pits contestants against each other in a series of challenges.
+11   ;The reality competition show pits contestants against each other in a series of challenges.
 10  ;The computer scientist conducts research to advance the field of artificial intelligence.
 9   ;The sports psychology professor conducts research on peak performance.
 9   ;The basketball player dribbled past defenders to score a layup.
@@ -80,7 +80,7 @@
 8   ;The sports scientist studies the physiological effects of exercise on the body.
 7   ;The importance of vegan fashion in promoting animal welfare cannot be overemphasized.
 9   ;The equestrian rider cleared the obstacles with precision and grace.
-6   ;The importance of environmental education in education cannot be overstated.
+5   ;The importance of environmental education in education cannot be overstated.
 2   ;The benefits of investing in managed futures for diversification are well established.
 1   ;The link between stress and immune function is well established.
 11  ;The stage play received glowing reviews for its innovative staging and powerful performances.
@@ -109,7 +109,7 @@
 5   ;The importance of cultural competence education in education cannot be overemphasized.
 4   ;The importance of food traceability cannot be overemphasized.
 6   ;The importance of protecting wetlands in maintaining water quality cannot be overemphasized.
-6   ;The benefits of using sustainable manufacturing practices in fashion are many, including reduced waste and improved sustainability.
+7   ;The benefits of using sustainable manufacturing practices in fashion are many, including reduced waste and improved sustainability.
 6   ;The impact of air pollution on the environment is a topic of ongoing concern.
 10  ;The autonomous vehicle industry is poised for rapid growth in the coming years.
 7   ;The benefits of using sustainable textiles in fashion are many, including reduced environmental impact and improved sustainability.
@@ -124,7 +124,7 @@
 9	;The sports psychologist helps athletes overcome mental barriers.
 2	;The impact of the gig economy on traditional employment is a topic of concern.
 4	;The benefits of eating a low-FODMAP diet are many, including improved digestion and reduced bloating.
-1	;The benefits of sustainable living are many, including reduced waste and improved health.
+6	;The benefits of sustainable living are many, including reduced waste and improved health.
 5	;The impact of class size on student outcomes is a topic of ongoing research.
 0	;The international community is putting pressure on the government to take action.
 5	;The benefits of a student-centered learning education are many, including improved engagement and motivation skills.
@@ -135,7 +135,7 @@
 11	;The singer's acoustic album showcases their vocal talent and songwriting skills.
 1	;The benefits of a healthy lifestyle for reducing the risk of dementia are well established.
 2   ;The benefits of investing in small-cap stocks for growth are well established.
-1	;The importance of staying hydrated cannot be overemphasized.
+4	;The importance of staying hydrated cannot be overemphasized.
 3	;The benefits of traveling by rickshaw are many, including affordability and cultural experience.
 10	;The company announced a breakthrough in quantum computing research.
 9	;The football fanatics tailgated outside the stadium before the game.
@@ -171,13 +171,13 @@
 7	;The importance of fair trade in fashion cannot be overemphasized.
 9	;The baseball slugger hit a home run that sailed over the outfield fence.
 4	;The impact of food additives on liver function is a topic of ongoing debate.
-1	;The benefits of eating a vegetarian diet are many, including reduced environmental impact and improved health.
+4	;The benefits of eating a vegetarian diet are many, including reduced environmental impact and improved health.
 9	;The baseball pitcher threw a perfect game, striking out every batter.
 7	;The importance of body positivity in fashion cannot be overstated.
 4	;The benefits of eating a vegan diet are many, including ethical and environmental considerations.
 6	;The impact of soil degradation on the environment is a topic of ongoing concern.
 0	;The Supreme Court has agreed to hear arguments in the landmark case.
-1	;The benefits of eating a ketogenic diet are many, including weight loss and improved blood sugar control.
+4	;The benefits of eating a ketogenic diet are many, including weight loss and improved blood sugar control.
 6	;The benefits of using green spaces are many, including improved mental health and reduced urban heat island effect.
 1	;The impact of food additives on metabolism is a topic of ongoing debate.
 7	;The impact of fashion on cultural diversity is a topic of ongoing concern.
@@ -191,7 +191,7 @@
 7	;The impact of fashion on cultural preservation is a topic of ongoing research.
 5	;The impact of educational technology on student outcomes is a topic of ongoing research.
 6	;The impact of invasive species on biodiversity is a topic of ongoing research.
-1	;The governor has announced a plan to address the mental health crisis.
+0	;The governor has announced a plan to address the mental health crisis.
 6	;The impact of ocean acidification on marine life is a topic of ongoing research.
 1	;The World Health Organization is urging countries to invest in vaccination programs.
 4	;The benefits of eating a low-glycemic diet are many, including improved blood sugar control and reduced inflammation.

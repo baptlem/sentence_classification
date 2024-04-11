@@ -44,7 +44,8 @@ def evaluation(predicted_label,df_test):
 
 def import_data(train_path,test_path):
     df_train = pd.read_csv(train_path,names=['labels','sentences'],sep='\t')
-    df_train['sentences'] = df_train['sentences'].astype("str")
+    df_train['sentences'] = df_train['sentences'].astype(str)
+    # df_train["labels"] = df_train['labels'].astype(int)
     df_train = df_train[df_train['sentences'].apply(lambda x: len(x.split()) >= 4)]
     df_train = df_train.drop_duplicates(subset='sentences').reset_index(drop=True)
     if test_path == "data/test_shuffle.txt":

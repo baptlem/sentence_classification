@@ -50,9 +50,10 @@ def _create_vocab(df_train,stop_words="english"):
     
     model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
     theme = ["Politics","Health","Finance","Travel","Food","Education","Environment","Fashion","Science","Sports","Technology","Entertainment"]
-    threshold = 0.5
+    threshold =  [0.45,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5]
     
     pipeline = Pipeline([
+        
     ('preprocess', FunctionTransformer(_preprocess_text)),
     ('vectorizer',  TfidfVectorizer(sublinear_tf=True, stop_words=stop_words)),#, max_df=0.5, min_df=5
     ])
@@ -65,7 +66,8 @@ def _create_vocab(df_train,stop_words="english"):
     results = cosine_similarity(embedding_voc,embedding_theme)
     vectors = np.array(results) 
     indices = np.where(np.any(vectors > threshold, axis=1))[0]
-
+    # indices = np.where(np.sum(vectors > threshold, axis=1) == 1)[0]
+    print(list(np.array(list(vocabulary.keys()))[indices]))
     return list(np.array(list(vocabulary.keys()))[indices])
 
 
@@ -73,6 +75,7 @@ def _create_vocab(df_train,stop_words="english"):
 def llm_embedding(model_name,df_train,df_test,k=25):
     # TODO replace by sklearn knn
     model = SentenceTransformer(model_name)
+    model.max_seq_length = 128
     embeddings_test = model.encode(list(df_test["sentences"]))
     embedding_train = model.encode(list(df_train['sentences']))
     results = cosine_similarity(embedding_train,embeddings_test).transpose()
@@ -116,8 +119,15 @@ def bert_score(df_train,df_test,k=25):
      
     
 
-def finetuned_llm():
-    pass
+def finetuned_llm(model_name_llm,model_name_classifier, df_train, df_test):
+    model_llm = SentenceTransformer(model_name_llm)
+    embeddings_test = model_llm.encode(list(df_test["sentences"]))
+    embedding_train = model_llm.encode(list(df_train['sentences']))
+    # print(embedding_train.shape)
+    model_name_classifier.fit(embedding_train,df_train['labels'])
+    predicted_label = model_name_classifier.predict(embeddings_test)
+    return predicted_label
+    
 
 
 
