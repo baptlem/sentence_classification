@@ -22,11 +22,14 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression, SGDClassifier,RidgeClassifier
 from sklearn.naive_bayes import ComplementNB
 from sklearn.neighbors import KNeighborsClassifier, NearestCentroid
+from sklearn.gaussian_process import GaussianProcessClassifier
 from sklearn.svm import LinearSVC
 from tqdm import tqdm
 import warnings
 import csv
 from xgboost import XGBClassifier
+from sklearn.gaussian_process.kernels import RBF
+from sklearn.ensemble import ExtraTreesClassifier
 
 warnings.filterwarnings("ignore")
 
@@ -81,7 +84,7 @@ if __name__ == "__main__":
     # evaluation(liste_of_preds_llm_embeddings_centroid,df_test)
     
     weights = None
-    # weights =  {6:95/149,1:95/119,5:95/111,0:95/118,7: 95/97,9: 95/97,10:95/90,2: 95/86,11:95/85,3: 95/72,8: 95/57,4: 95/59}
+    # weights =  {6:95/150,1:95/110,5:95/117,0:95/119,7: 95/98,9: 95/101,10:95/84,2: 95/86,11:95/82,3: 95/71,8: 95/52,4: 95/70}
     liste_of_preds_llm_finetuned = []
     model_name_classifier = [
                         # XGBClassifier(use_label_encoder=False, eval_metric='mlogloss',n_estimators=20,min_child_weight=2),
@@ -89,7 +92,13 @@ if __name__ == "__main__":
                         SGDClassifier(loss='hinge', penalty='l2',alpha=0.005, random_state=42,class_weight=weights)
                         ,RidgeClassifier(alpha=10.0, solver="sparse_cg",class_weight=weights)
                          ,LinearSVC(C=0.1, dual=False,class_weight=weights)
+                        # ,GaussianProcessClassifier(kernel=1.0 * RBF(1.0),random_state=0)
+                        # ,ExtraTreesClassifier(n_estimators=100, random_state=0)
+                        ,SVC(C=0.1,class_weight=weights)
+                        #   ,LogisticRegression(C=0.5, max_iter=1000,class_weight=weights)
+                        # ,ComplementNB(alpha=1.0)
                         ] 
+    # TODO rajouter d'autres modèles plus efficaces
     #"mixedbread-ai/mxbai-embed-large-v1" 26 minutes outch                               
     for model_name_classifier in tqdm(model_name_classifier):
         # pass
@@ -110,7 +119,7 @@ if __name__ == "__main__":
     evaluation([final_model],df_test)
     print(pd.Series(final_model).value_counts())
     
-    # filename = "result3.csv"
+    # filename = "results/result6.csv"
     # dico = pd.read_json("data/train.json")
     # corresp_labels = {str(i):col for i,col in enumerate(dico.columns)}
     # with open(filename, "w", newline="") as csvfile:
