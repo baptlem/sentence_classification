@@ -129,7 +129,7 @@
 0	;The international community is putting pressure on the government to take action.
 5	;The benefits of a student-centered learning education are many, including improved engagement and motivation skills.
 6	;The importance of protecting wildlife corridors in maintaining biodiversity cannot be overemphasized.
-1	;The impact of antibiotic resistance on public health is a topic of ongoing scientific research.
+8	;The impact of antibiotic resistance on public health is a topic of ongoing scientific research.
 1	;Smoking is the leading cause of preventable death worldwide.
 1	;The link between poor nutrition and bone health issues such as osteoporosis is well established.
 11	;The singer's acoustic album showcases their vocal talent and songwriting skills.

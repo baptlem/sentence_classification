@@ -10,30 +10,49 @@ from sklearn.feature_extraction.text import HashingVectorizer, FeatureHasher
 from nltk.corpus import stopwords
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import FunctionTransformer
-from sklearn.linear_model import SGDClassifier
+from sklearn.linear_model import SGDClassifier,RidgeClassifier
 import warnings
 from sentence_transformers import SentenceTransformer, util
 from bert_score import score
 from utilities import _most_common_element
 from sklearn.neighbors import NearestCentroid
+import torch.nn.functional as F
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_selection import SelectKBest
+from sklearn.feature_selection import f_classif
 
 warnings.filterwarnings("ignore")
 
 
+def compare_to_class(model,df_train,df_test,embedding_name):
+    embedding_model = SentenceTransformer(embedding_name)
+    theme = ["Politics","Health","Finance","Travel","Food","Education","Environment","Fashion","Science","Sports","Technology","Entertainment"]
+    embeddings_theme = embedding_model.encode(theme)
+    embeddings_train = embedding_model.encode(list(df_train['sentences']))
+    embedding_test = embedding_model.encode(list(df_test['sentences']))
+    results = cosine_similarity(embeddings_theme,embeddings_train).transpose()
+    results_test = cosine_similarity(embeddings_theme,embedding_test).transpose()
+    model.fit(results,df_train['labels'])
+    predict = model.predict(results_test)
+    # highest_indices = np.argsort(results)[:,-1:].flatten()
+    # print(highest_indices)
+    return predict
 
 def tf_idf_classifier(df_train,df_test,classifier=SGDClassifier(),stop_words="english",train_vocab=None):
     vocab = None
     if train_vocab is not None:
         vocab = _create_vocab(train_vocab,stop_words="english")
+    # print(df_train.shape)
     pipeline = Pipeline([
     ('preprocess', FunctionTransformer(_preprocess_text)),
-    ('vectorizer',  TfidfVectorizer(sublinear_tf=True, max_df=0.5, min_df=5, stop_words=stop_words,vocabulary=vocab)),
-    # ('hasher', FeatureHasher(n_features=2**10)),
+    ('vectorizer',  TfidfVectorizer(ngram_range=(1, 2), min_df=2, stop_words=stop_words,vocabulary=vocab,strip_accents= 'unicode',decode_error= 'replace')),
+    ('selector',  SelectKBest(f_classif, k=500)),
     ("classifier", classifier)
     ])
-
+    
     X_train = df_train.loc[:,"sentences"]
     y_train = df_train.loc[:,"labels"]
+    # print(pipeline[:2].fit_transform(X_train,y_train).shape)
     pipeline.fit(X_train, y_train)
     predicted_label = pipeline.predict(df_test.loc[:,"sentences"])
     return predicted_label
@@ -50,7 +69,7 @@ def _create_vocab(df_train,stop_words="english"):
     
     model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
     theme = ["Politics","Health","Finance","Travel","Food","Education","Environment","Fashion","Science","Sports","Technology","Entertainment"]
-    threshold =  [0.45,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5]
+    threshold =  [0.405,0.38,0.37,0.37,0.4,0.41,0.4,0.40,0.43,0.395,0.408,0.42]
     
     pipeline = Pipeline([
         
@@ -65,9 +84,13 @@ def _create_vocab(df_train,stop_words="english"):
     embedding_theme = model.encode(theme)
     results = cosine_similarity(embedding_voc,embedding_theme)
     vectors = np.array(results) 
+    # print(vectors.shape)
+    # print(pd.Series(np.where(vectors > threshold)[1]).value_counts())
+    # print(np.where(np.sum(vectors > threshold, axis=1) == 1)[1])
     indices = np.where(np.any(vectors > threshold, axis=1))[0]
+    # print(indices)
     # indices = np.where(np.sum(vectors > threshold, axis=1) == 1)[0]
-    print(list(np.array(list(vocabulary.keys()))[indices]))
+    # print(list(np.array(list(vocabulary.keys()))[indices]))
     return list(np.array(list(vocabulary.keys()))[indices])
 
 
@@ -117,16 +140,29 @@ def bert_score(df_train,df_test,k=25):
         result.append(_most_common_element(highest_indices[i]))
     return result
      
-    
+def softmax(x, temperature=1.0):
+    e_x = np.exp(x / temperature)
+    return e_x / e_x.sum(axis=1, keepdims=True)  
 
 def finetuned_llm(model_name_llm,model_name_classifier, df_train, df_test):
+    predicted_probas = []
     model_llm = SentenceTransformer(model_name_llm)
     embeddings_test = model_llm.encode(list(df_test["sentences"]))
     embedding_train = model_llm.encode(list(df_train['sentences']))
-    # print(embedding_train.shape)
     model_name_classifier.fit(embedding_train,df_train['labels'])
+    
+    # if isinstance(model_name_classifier,SGDClassifier):
+    # predicted_probas = model_name_classifier.predict_proba(embeddings_test)
+    # print(predicted_probas[0])
+    # print(predicted_probas.shape)
+    # predicted_probas = softmax(predicted_probas, temperature=3.0)
+    # print(predicted_probas[0])
+    # print(predicted_probas.shape)
+    # else:
+    #     predicted_probas = model_name_classifier.decision_function(embeddings_test)
+    #     predicted_probas = softmax(predicted_probas, temperature=3.0)
     predicted_label = model_name_classifier.predict(embeddings_test)
-    return predicted_label
+    return predicted_label,predicted_probas
     
 
 

@@ -62,6 +62,18 @@ def aggregate_voter(list_of_preds):
         assembly_result.append(_most_common_element([voter[i] for voter in list_of_preds]))   
     return assembly_result
 
+def aggregate_voter_proba(list_of_list_list_of_proba):
+    assembly_result = []
+    # print(list_of_list_list_of_proba)
+    # print(np.array(list_of_list_list_of_proba).shape)
+    sum_proba = np.mean(list_of_list_list_of_proba, axis=0)
+    # print(sum_proba.shape)
+    # print(sum_proba)
+    for proba in sum_proba:
+        assembly_result.append(np.argmax(proba))
+    # print(assembly_result)
+    return assembly_result
+
 def _most_common_element(lst):
     counts = {}
     for element in lst:
