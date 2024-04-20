@@ -46,7 +46,7 @@ def import_data(train_path,test_path):
     df_train = pd.read_csv(train_path,names=['labels','sentences'],sep='\t')
     df_train['sentences'] = df_train['sentences'].astype(str)
     # df_train["labels"] = df_train['labels'].astype(int)
-    df_train = df_train[df_train['sentences'].apply(lambda x: len(x.split()) >= 6 and len(x.split()) <= 21)]
+    df_train = df_train[df_train['sentences'].apply(lambda x: len(x.split()) >= 6 and len(x.split()) <= 35)]
     df_train = df_train.drop_duplicates(subset='sentences').reset_index(drop=True)
     if test_path == "data/test_shuffle.txt":
         df_test = pd.read_csv(test_path, sep=';',names=['sentences'])

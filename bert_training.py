@@ -21,7 +21,8 @@ from torch.utils.tensorboard import SummaryWriter
 from torch.utils.data import TensorDataset, DataLoader, SequentialSampler
 from sklearn.model_selection import train_test_split
 import inspect 
-import collections 
+import collections
+from clean_code.utilities import import_data 
 import os
 print(os.path.abspath('.'))
 
@@ -31,50 +32,16 @@ Code inspired from https://medium.com/@coderhack.com/fine-tuning-bert-for-text-c
 https://github.com/nlptown/nlp-notebooks/blob/master/Text%20classification%20with%20BERT%20in%20PyTorch.ipynb
 https://medium.com/@karkar.nizar/fine-tuning-bert-for-text-classification-with-lora-f12af7fa95e4
 """
-MAX_SEQ_LENGTH=512
-BATCH_SIZE = 8
+MAX_SEQ_LENGTH = 128
+BATCH_SIZE = 32
 EPOCH = 50
 GRADIENT_ACCUMULATION_STEPS = 1
-LEARNING_RATE = 5e-5 #16
-LEARNING_RATE = 1e-6 #8
+LEARNING_RATE = 1e-5 #32
+# LEARNING_RATE = 5e-5 #16
+# LEARNING_RATE = 1e-6 #8
 WARMUP_PROPORTION = 0.1
 MAX_GRAD_NORM = 5
-
-class Dataset(torch.utils.data.Dataset):
-  'Characterizes a dataset for PyTorch'
-  def __init__(self, sentences, labels):
-        'Initialization'
-        self.labels = labels
-        self.sentences = sentences
-
-  def __len__(self):
-        'Denotes the total number of samples'
-        return len(self.labels)
-
-  def __getitem__(self, index):
-        'Generates one sample of data'
-
-        # Load data and get label
-        x = self.sentences[index]
-        y = self.labels[index]
-
-        return x, y
-
-def train(model, optimizer, train_loader, criterion, start_i=0):
-    model.train()
-    total_loss = 0
-    i=start_i
-    for batch in train_loader:
-        optimizer.zero_grad()
-        input_ids, attention_mask, labels = batch 
-        outputs = model(input_ids, attention_mask)
-        loss = criterion(outputs, labels)
-        writer.add_scalar("Loss/train", loss, i)
-        loss.backward()
-        optimizer.step()
-        total_loss += loss.item()
-        i += 1
-    print(f'Training loss: {total_loss/len(train_loader)}')
+device = "cuda" if torch.cuda.is_available() else "cpu"
 
 def evaluate(model, test_loader, criterion):
     model.eval()
@@ -102,7 +69,6 @@ class BertInputItem(object):
         self.segment_ids = segment_ids
         self.label_id = label_id
         
-
 def convert_examples_to_inputs(example_texts, example_labels, label2idx, max_seq_length, tokenizer, verbose=0):
     """Loads a data file into a list of `InputBatch`s."""
     
@@ -155,31 +121,64 @@ def get_data_loader(features, max_seq_length, batch_size, shuffle=True):
     dataloader = DataLoader(data, shuffle=shuffle, batch_size=batch_size)
     return dataloader
 
-df_train = pd.read_json("./nlp_kaggle/NLP_CS_kaggle/data/train.json")
+
+df_train = pd.read_json("./NLP/kaggle/NLP_CS_kaggle/data/train.json")
 label2idx = {col:i for i,col in enumerate(df_train.columns)}
 
-sentences = []
-labels = []
-with open("./nlp_kaggle/NLP_CS_kaggle/data/backtrans_eda_train_set.txt", 'r') as f:
-    for line in f.readlines():
-        label, sentence = line.split(maxsplit=1)
-        labels.append(label)
-        sentences.append(sentence.strip())
-
-tokenizer = BertTokenizer.from_pretrained('google-bert/bert-base-uncased',
+tokenizer = BertTokenizer.from_pretrained(#'google-bert/bert-base-uncased',
+                                          'distilbert/distilbert-base-uncased'
                                           # do_lower_case=True 
                                           )  
-model = BertForSequenceClassification.from_pretrained('google-bert/bert-base-uncased', num_labels=len(label2idx)).cuda()
-# model = AutoModelForSequenceClassification.from_pretrained("bert-base-cased", num_labels=12)
 
-lora_config = LoraConfig(
-    task_type=TaskType.SEQ_CLS, r=1, lora_alpha=1, lora_dropout=0.1
-)
+model = BertForSequenceClassification.from_pretrained(#'google-bert/bert-base-uncased'
+                                                       'distilbert/distilbert-base-uncased',
+                                                        num_labels=len(label2idx)
+                                                    ).cuda()
 
-model = get_peft_model(model, lora_config)
 
-arr = np.array([sentences, labels]).T
-X_train, X_val, y_train, y_val = train_test_split(arr[:,0], arr[:,1], test_size=0.05, shuffle=True)
+# lora_config = LoraConfig(
+#     task_type=TaskType.SEQ_CLS, r=1, lora_alpha=1, lora_dropout=0.1
+# )
+# model = get_peft_model(model, lora_config)
+
+#Fine-tuning only the classifier
+for param in model.bert.parameters():
+    param.requires_grad = False
+
+# model recovery
+# checkpoint = torch.load("./NLP/kaggle/NLP_CS_kaggle/finetuned_bert/best_distilbert_0804_lora.bin", map_location=device)
+# model.load_state_dict(checkpoint)
+
+
+
+
+# sentences = []
+# labels = []
+# with open("./NLP/kaggle/NLP_CS_kaggle/data/free_augmentation_100_0904.txt", 'r') as f:
+#     for line in f.readlines():
+#         label, sentence = line.split(maxsplit=1)
+#         labels.append(label)
+#         sentences.append(sentence.strip())
+# train_set = np.array([labels, sentences]).T
+
+# sentences = []
+# labels = []
+# with open("./NLP/kaggle/NLP_CS_kaggle/data/annotated_test.txt", 'r') as f:
+#     for line in f.readlines():
+#         label, sentence = line.split(maxsplit=1)
+#         labels.append(label)
+#         sentences.append(sentence.strip())
+# print(len(sentences))
+# test_set = np.array([labels, sentences]).T
+
+train, test = import_data("./NLP/kaggle/NLP_CS_kaggle/data/concat_dataset.txt", "./NLP/kaggle/NLP_CS_kaggle/data/annotated_test.txt")
+
+train_set = train.to_numpy()
+test_set = test.to_numpy()
+
+
+X_train, X_val, y_train, y_val = train_set[:,1], test_set[:,1], train_set[:,0], test_set[:,0]
+# X_train, X_val, y_train, y_val = train_test_split(train_set[:,1], train_set[:,0], test_size=0.1)
 y_train = y_train.astype(np.uint8)
 y_val = y_val.astype(np.uint8)
 
@@ -187,7 +186,7 @@ train_features = convert_examples_to_inputs(X_train, y_train, label2idx, MAX_SEQ
 val_features = convert_examples_to_inputs(X_val, y_val, label2idx, MAX_SEQ_LENGTH, tokenizer)
 
 train_dataloader = get_data_loader(train_features, MAX_SEQ_LENGTH, BATCH_SIZE, shuffle=True)
-val_dataloader = get_data_loader(val_features, MAX_SEQ_LENGTH, BATCH_SIZE, shuffle=False)
+val_dataloader = get_data_loader(val_features, MAX_SEQ_LENGTH, BATCH_SIZE, shuffle=True)
 
 def evaluate(model, dataloader):
     model.eval()
@@ -232,9 +231,9 @@ optimizer_grouped_parameters = [
 optimizer = AdamW(optimizer_grouped_parameters, lr=LEARNING_RATE, correct_bias=False)
 scheduler = WarmupLinearSchedule(optimizer, warmup_steps=num_warmup_steps, t_total=num_train_steps)
 
-OUTPUT_DIR = "./models/finetuned_bert"
-MODEL_FILE_NAME = "bert_1904_lora.bin"
-PATIENCE = 2
+OUTPUT_DIR = "./NLP/kaggle/NLP_CS_kaggle/finetuned_bert"
+MODEL_FILE_NAME = "distilbert_ds_2004_concat.bin"
+PATIENCE = 50
 device = "cuda"
 loss_history = []
 no_improvement = 0
@@ -270,11 +269,15 @@ for _ in trange(int(EPOCH), desc="Epoch"):
     if len(loss_history) == 0 or dev_loss < min(loss_history):
         no_improvement = 0
         model_to_save = model.module if hasattr(model, 'module') else model
-        output_model_file = os.path.join(OUTPUT_DIR, MODEL_FILE_NAME)
+        output_model_file = os.path.join(OUTPUT_DIR, "best_"+MODEL_FILE_NAME)
         torch.save(model_to_save.state_dict(), output_model_file)
     else:
         no_improvement += 1
-    
+
+    model_to_save = model.module if hasattr(model, 'module') else model
+    output_model_file = os.path.join(OUTPUT_DIR, MODEL_FILE_NAME)
+    torch.save(model_to_save.state_dict(), output_model_file)
+
     if no_improvement >= PATIENCE: 
         print("No improvement on development set. Finish training.")
         break
@@ -287,61 +290,10 @@ for _ in trange(int(EPOCH), desc="Epoch"):
 
 plt.plot(np.arange(len(loss_history)), loss_history)
 plt.title("Loss over epoch")
-plt.savefig("./nlp_kaggle/train_bert_1804.png")
+plt.savefig("./NLP/kaggle/NLP_CS_kaggle/distilbert_ds_2004_concat.png")
 
 
 raise
 
 
 
-
-
-
-# # use signature() 
-# # print(inspect.signature(model.forward)) 
-# tokens_ids = tokenizer.convert_tokens_to_ids(tokenizer.tokenize(sentences[0]))
-# tokens_ids_t = torch.tensor(tokens_ids, device="cuda")
-# tokens_ids_t = tokenizer(sentences[0], return_tensors='pt')
-# for k,v in tokens_ids_t.items():
-#     tokens_ids_t[k] = v.cuda()
-# label = torch.tensor(int(labels[0]), device="cuda")
-# pred = model.forward(**tokens_ids_t, labels=labels[0])
-# print(pred)
-
-
-raise
-
-writer = SummaryWriter()
-model = BertModel.from_pretrained('google-bert/bert-base-uncased')
-classifier = nn.Linear(768, 12)
-model = nn.Sequential(model, classifier)
-criterion = nn.CrossEntropyLoss()  
-optimizer = AdamW(model.parameters(), lr=2e-5)
-
-# https://stanford.edu/~shervine/blog/pytorch-how-to-generate-data-parallel
-params = {'batch_size': BATCH_SIZE,
-          'shuffle': True,
-          'num_workers': 0}
-
-# Generators
-training_set = Dataset(X_train, y_train)
-training_generator = DataLoader(training_set, **params)
-
-validation_set = Dataset(X_val, y_val)
-validation_generator = torch.utils.data.DataLoader(validation_set, **params)
-
-
-i = 0
-for epoch in range(EPOCH):
-    for local_batch, local_labels in training_generator:
-        print(local_batch)
-        print(local_labels)
-        raise
-    train(model, optimizer, training_generator, criterion, start_i=i)
-    evaluate(model, validation_generator, criterion)
-    i += BATCH_SIZE
-
-writer.flush()
-torch.save(model.state_dict(), 'fine_tuned_bert.pt')
-
-writer.close()

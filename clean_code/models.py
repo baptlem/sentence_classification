@@ -20,6 +20,7 @@ import torch.nn.functional as F
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import f_classif
+from sklearn.utils import shuffle
 
 warnings.filterwarnings("ignore")
 
@@ -146,6 +147,7 @@ def softmax(x, temperature=1.0):
 
 def finetuned_llm(model_name_llm,model_name_classifier, df_train, df_test):
     predicted_probas = []
+    df_train = shuffle(df_train)
     model_llm = SentenceTransformer(model_name_llm)
     embeddings_test = model_llm.encode(list(df_test["sentences"]))
     embedding_train = model_llm.encode(list(df_train['sentences']))
