@@ -21,6 +21,7 @@ def translate(texts, model, tokenizer, language="fr"):
     encoded = tokenizer.prepare_seq2seq_batch(src_texts,
                                               return_tensors='pt')
     
+    # Translation on GPU, doesn't work
     # batch_encoded = np.array_split(encoded, m.ceil(len(encoded)/64))
     # batch_translated = []
     # with torch.no_grad():
@@ -31,9 +32,7 @@ def translate(texts, model, tokenizer, language="fr"):
     #         translated = model.generate(**batch)
     #         translated = translated.cpu() #.to('cpu')
     #         batch_translated.append(translated)
-    
     # batch_translated = [el for batch in batch_translated for el in batch]
-
 
     translated = model.generate(**encoded)
     # Convert the generated tokens indices back into text
@@ -55,7 +54,6 @@ def back_translate(texts, target_lang="fr", source_lang="en"):
 
 sentences = []
 labels = []
-
 with open("nlp_kaggle/NLP_CS_kaggle/data/eda_train_set.txt", 'r') as f:
     for line in f.readlines():
         label, sentence = line.split(maxsplit=1)
@@ -77,16 +75,11 @@ en_model = MarianMTModel.from_pretrained(en_model_name)
 # en_model.to("cuda")
 
 
-
 en_texts = sentences
-# print(en_texts)
 
 aug_texts_es = back_translate(en_texts, source_lang="en", target_lang="es")
-# print(en_texts)
-# print(aug_texts)
 
 aug_texts_fr = back_translate(en_texts, source_lang="en", target_lang="fr")
-# print(aug_texts)
 
 
 with open("nlp_kaggle/NLP_CS_kaggle/data/backtrans_train_set.txt", 'w') as f:
@@ -95,11 +88,6 @@ with open("nlp_kaggle/NLP_CS_kaggle/data/backtrans_train_set.txt", 'w') as f:
         f.write(f"{label}\t{es_sent.strip()}\n")
         f.write(f"{label}\t{fr_sent.strip()}\n")
 
-
-
-# model = MarianMTModel.from_pretrained(model_name)
-# translated = model.generate(**tokenizer(src_text, return_tensors="pt", padding=True))
-# decoded = [tokenizer.decode(t, skip_special_tokens=True) for t in translated]
         
 
 # CroissantLLM (back translation doesn't work)
@@ -113,5 +101,3 @@ with open("nlp_kaggle/NLP_CS_kaggle/data/backtrans_train_set.txt", 'w') as f:
 # tokens = model.generate(**inputs, max_length=100, do_sample=True, top_p=0.95, top_k=1, temperature=0.3)
 # decoded = tokenizer.decode(tokens[0])
 # print(decoded)
-
-raise

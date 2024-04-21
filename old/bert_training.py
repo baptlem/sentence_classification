@@ -26,12 +26,12 @@ from clean_code.utilities import import_data
 import os
 print(os.path.abspath('.'))
 
-
 """
 Code inspired from https://medium.com/@coderhack.com/fine-tuning-bert-for-text-classification-a-step-by-step-guide-1a1c5f8e8ae1
 https://github.com/nlptown/nlp-notebooks/blob/master/Text%20classification%20with%20BERT%20in%20PyTorch.ipynb
 https://medium.com/@karkar.nizar/fine-tuning-bert-for-text-classification-with-lora-f12af7fa95e4
 """
+
 MAX_SEQ_LENGTH = 128
 BATCH_SIZE = 32
 EPOCH = 50
@@ -151,7 +151,6 @@ for param in model.bert.parameters():
 
 
 
-
 # sentences = []
 # labels = []
 # with open("./NLP/kaggle/NLP_CS_kaggle/data/free_augmentation_100_0904.txt", 'r') as f:
@@ -233,7 +232,7 @@ scheduler = WarmupLinearSchedule(optimizer, warmup_steps=num_warmup_steps, t_tot
 
 OUTPUT_DIR = "./NLP/kaggle/NLP_CS_kaggle/finetuned_bert"
 MODEL_FILE_NAME = "distilbert_ds_2004_concat.bin"
-PATIENCE = 50
+PATIENCE = 5
 device = "cuda"
 loss_history = []
 no_improvement = 0
@@ -286,14 +285,6 @@ for _ in trange(int(EPOCH), desc="Epoch"):
     loss_history.append(dev_loss)
 
 
-
-
 plt.plot(np.arange(len(loss_history)), loss_history)
 plt.title("Loss over epoch")
 plt.savefig("./NLP/kaggle/NLP_CS_kaggle/distilbert_ds_2004_concat.png")
-
-
-raise
-
-
-

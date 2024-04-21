@@ -14,6 +14,12 @@ import torch
 import os
 print(os.path.abspath('.'))
 
+"""
+Code inspired from https://medium.com/@coderhack.com/fine-tuning-bert-for-text-classification-a-step-by-step-guide-1a1c5f8e8ae1
+https://github.com/nlptown/nlp-notebooks/blob/master/Text%20classification%20with%20BERT%20in%20PyTorch.ipynb
+https://medium.com/@karkar.nizar/fine-tuning-bert-for-text-classification-with-lora-f12af7fa95e4
+"""
+
 MAX_SEQ_LENGTH=512
 BATCH_SIZE = 2
 device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -92,9 +98,9 @@ checkpoint = torch.load("./NLP/kaggle/NLP_CS_kaggle/finetuned_bert/best_distilbe
 bert_config = BertConfig(num_labels=12)
 model = BertForSequenceClassification(bert_config)
 
-lora_config = LoraConfig(
-    task_type=TaskType.SEQ_CLS, r=1, lora_alpha=1, lora_dropout=0.1
-)
+# lora_config = LoraConfig(
+#     task_type=TaskType.SEQ_CLS, r=1, lora_alpha=1, lora_dropout=0.1
+# )
 # model = get_peft_model(model, lora_config)
 model.to(device)
 
@@ -116,11 +122,11 @@ true_labels = np.array(true_labels)
 
 
 
-train_features = convert_examples_to_inputs(sentences, true_labels, label2idx, MAX_SEQ_LENGTH, tokenizer, verbose=0) 
-train_dataloader = get_data_loader(train_features, MAX_SEQ_LENGTH, BATCH_SIZE, shuffle=False)
+true_features = convert_examples_to_inputs(sentences, true_labels, label2idx, MAX_SEQ_LENGTH, tokenizer, verbose=0) 
+true_dataloader = get_data_loader(true_features, MAX_SEQ_LENGTH, BATCH_SIZE, shuffle=False)
 
 predict_labels = []
-for  batch in tqdm(train_dataloader, desc="Evaluation iteration"):
+for  batch in tqdm(true_dataloader, desc="Evaluation iteration"):
     batch = tuple(t.to(device) for t in batch)
     input_ids, input_mask, segment_ids, label_ids = batch
 
