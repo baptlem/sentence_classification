@@ -1,6 +1,5 @@
 __pycache__
 .vector_cache
-results
-clean_code/saved_predictions/*
+saved_predictions/*
 results/*
 yolo
