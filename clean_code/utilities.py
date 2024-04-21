@@ -10,6 +10,7 @@ warnings.filterwarnings("ignore")
 
 DIRECTORY = "clean_code/saved_predictions/"
 
+
 def save_prediction(pred,name):
     with open(DIRECTORY + name, 'wb') as f:
         pickle.dump(pred, f)
@@ -18,8 +19,20 @@ def load_prediction(name):
     file_path = DIRECTORY + name
     with open(file_path, 'rb') as f:
         return pickle.load(f)
+    
 
 def evaluation(predicted_label,df_test):
+    """
+        Evaluate the performance of the predicted labels.
+        Draw a confusion matrix and print the classification report for each model predictions
+
+        Parameters:
+        predicted_label (list): List of predicted labels.
+        df_test (pandas.DataFrame): DataFrame containing the test data.
+
+        Returns:
+        None
+    """
     if len(predicted_label) == 0:
         return
     if len(predicted_label) == 1:
@@ -45,36 +58,44 @@ def evaluation(predicted_label,df_test):
 def import_data(train_path,test_path):
     df_train = pd.read_csv(train_path,names=['labels','sentences'],sep='\t')
     df_train['sentences'] = df_train['sentences'].astype(str)
-    # df_train["labels"] = df_train['labels'].astype(int)
     df_train = df_train[df_train['sentences'].apply(lambda x: len(x.split()) >= 6 and len(x.split()) <= 35)]
     df_train = df_train.drop_duplicates(subset='sentences').reset_index(drop=True)
     if test_path == "data/test_shuffle.txt":
         df_test = pd.read_csv(test_path, sep=';',names=['sentences'])
     else:
         df_test = pd.read_csv(test_path, sep=';',names=['labels','sentences'])
-    # print(df_train.shape,df_test.shape)
     return df_train,df_test
 
+
 def aggregate_voter(list_of_preds):
+    """
+    Aggregates the predictions from multiple voters.
+
+    Args:
+        list_of_preds (list): A list of lists containing the predictions from each voter.
+
+    Returns:
+        list: A list containing the aggregated predictions.
+
+    """
     assembly_result = []
     for i in range(len(list_of_preds[0])):
-        # print([voter[i] for voter in list_of_preds],testset[i],most_common_element([voter[i] for voter in list_of_preds]))
         assembly_result.append(_most_common_element([voter[i] for voter in list_of_preds]))   
     return assembly_result
 
-def aggregate_voter_proba(list_of_list_list_of_proba):
-    assembly_result = []
-    # print(list_of_list_list_of_proba)
-    # print(np.array(list_of_list_list_of_proba).shape)
-    sum_proba = np.mean(list_of_list_list_of_proba, axis=0)
-    # print(sum_proba.shape)
-    # print(sum_proba)
-    for proba in sum_proba:
-        assembly_result.append(np.argmax(proba))
-    # print(assembly_result)
-    return assembly_result
 
 def _most_common_element(lst):
+    """
+    Finds the most common element in a list (Hard voting)
+
+    Args:
+        lst (list): The list of elements.
+
+    Returns:
+        The most common element in the list. If there are multiple elements with the same highest count,
+        the function returns the first one encountered.
+
+    """
     counts = {}
     for element in lst:
         if element in counts:
@@ -88,5 +109,4 @@ def _most_common_element(lst):
         if element in most_common_elements:
             most_common_element = element
             break
-    
     return most_common_element
